@@ -11,7 +11,7 @@ player2Color = 'red';
 var currentPlayer = 1;
 document.getElementById('output').innerHTML = "Player 1 is yellow & Player 2 is red";
 
-
+//Outputs coordinates of board on console
 for(let i = 0; i < boardCell.length; i++){
   boardCell[i].addEventListener('click', (e) =>{
     console.log(`${e.target.parentElement.rowIndex}, ${e.target.cellIndex}`);
@@ -19,7 +19,7 @@ for(let i = 0; i < boardCell.length; i++){
 }
 
 
-//setting every cell to
+//setting every cell to white
 Array.prototype.forEach.call(boardCell, (cell) =>{
   cell.addEventListener('click', changeColor);
   cell.style.backgroundColor = 'white';
@@ -31,6 +31,7 @@ function changeColor(e){
   let row = [];
   let col = e.target.cellIndex;
 
+  //pushes the slot to the lowest available cell
   for(let i = 5; i > -1; i--){
     if(boardRow[i].children[col].style.backgroundColor == 'white'){
       row.push(boardRow[i].children[col]);

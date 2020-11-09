@@ -25,17 +25,19 @@
 
 .reset{
   position: absolute;
-  transform: translate(305%);
+  left: 48%;
   border: 1px solid rgb(0,0,0);
   width: 5rem;
+  top: 95vh;
   text-align: center;
   cursor: pointer;
 }
 
 #output{
-  transform: translate(170%);
+  transform: translateX(300%);
+  transform: translateY(800px);
   height: 50px;
-  width: 10%;
+
   background-color: rgb(30,144,255);
   text-align: center;
 }
